@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    font-family: WenQuanYi Micro Hei;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 8%;
+    border-bottom:2px solid #bdbec4;
+    background: #FB3434;
+}
+.return{
+    width: 24px;
+    height: 24px;
+    margin-top: 3%;
+    margin-left: 1%;
+    float:left;
+}
+.message{
+    position: relative;
+    float:left;
+    width: 70%;
+    height: 45%;
+    margin-top: 4%;
+    margin-left: 3%;
+    color:#ff1d04;
+}
+#message{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+.share{
+    margin-top: 3%;
+    margin-right: 3%;
+    float:right;
+    width: 9%;
+    height: 60%;
+}
+nav{
+    width: 100%;
+    height: 3rem;
+    border-bottom:1px solid #bdbec4;
+    line-height: 3rem;
+}
+p{
+    margin-top: 0.4rem;
+    border-right:1px solid #bdbec4;
+    width: 100%;
+    float:left;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    border-top:1px solid  #ffffff;
+}
+p:hover{
+    color:#ff1d04;
+}
+.goods{
+    margin-top:-1px;
+    float:left;
+    width: 33%;
+    height: 3rem;
+    border-top:1px solid #a1a2a7;
+}
+.goods:hover{
+    border-top:1px solid #ff1d04;
+}
+footer{
+    width: 100%;
+    height: 6.6%;
+    position: fixed;
+    left:0;
+    bottom:0;
+}
+.custom {
+    float:left;
+    width: 12%;
+    height: 100%;
+    border:1px solid #bdbec4;
+    text-align: center;
+    background-color: #ffffff;
+    /*box-sizing:border-box;*/
+}
+.store{
+     float:left;
+     width: 12%;
+     height: 100%;
+     border:1px solid #bdbec4;
+    text-align: center;
+    background-color: #ffffff;
+     /*box-sizing:border-box;*/
+ }
+.collection{
+    float:left;
+    width: 12%;
+    height: 100%;
+    border:1px solid #bdbec4;
+    text-align: center;
+    background-color: #ffffff;
+    /*box-sizing:border-box;*/
+}
+.shopping {
+    float:left;
+    width: 31%;
+    height: 100%;
+    background-color: #ff6100;
+    color:#ffffff;
+    text-align: center;
+    line-height: 3rem;
+}
+.buy{
+    float:left;
+    width: 31.5%;
+    height: 100%;
+    background-color: #ff1d04;
+    color:#ffffff;
+    text-align: center;
+    line-height: 3rem;
+}
+.atm,.shop,.favorite{
+    width: 30%;
+    height: 30%;
+    margin-top:10%;
+}
+#atm,#shop,#favorite{
+    display: block;
+    font-size:0.7rem ;
+    margin-top:10%;
+ }
+.carter,.shopbuy{
+    margin-top: 11%;
+}

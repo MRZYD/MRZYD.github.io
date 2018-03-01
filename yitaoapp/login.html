@@ -1,0 +1,198 @@
+<!DOCTYPE >
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maxmum-scale=1.0,user-scalable=0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   		<link rel="stylesheet" href="css/login.css" />
+	    <title>Document</title>
+	</head>
+	<body>
+		<script src="js/myajax.js" charset="utf-8"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+		<div class="header">
+			<div class="return">
+				<a href="javascript:history.go(-1)">
+					<img src="images/return2.png">
+				</a> 
+			</div>
+			<div class="help"><a href="#">帮助</a></div>
+		</div>
+		<div class="indexa">
+			<div class="logoaa">
+				<img src="images/QQ图片20171011175148.png"/>
+			</div>
+			<div class="zhuce-box-b">
+	        	<div class="usernamespana">
+					<input type="text" name="username" class="Iusernamea" id="usernamea" placeholder="手机号/邮箱/会员名"><br />
+					<span></span>
+				</div>
+				<div class="passwordspana">
+					<input type="password" name="password" class="passworda" id="passworda" placeholder="请输入密码"><br />
+					<span></span>
+				</div>
+				<div class="passwordspanaa">
+					<input type="password" name="password" class="passwordaa" id="confirmPassword" placeholder="请再次输入密码"><br />
+					<span></span>
+				</div>
+	  		</div>
+	  		<div class="firsta">
+	  			<input class="dddca" value="注册">	
+	  		</div>
+	  	</div>
+	  	<script>
+		    var Name = $(".Iusernamea");
+		    var Password = $(".passworda");
+		    var confirmPassword = $("#confirmPassword");
+		    var confirmPasswordSpan = $(".passwordspanaa span");
+		    var NameSpan = $(".usernamespana span");
+		    var PasswordSpan = $(".passwordspana span");
+		    var username;
+		    var password;
+		    var reg = /[0-9A-z_]+/;
+		    console.log(Name);
+		    Name.focus(function () {
+		        NameSpan.html("3-20位数字字母下划线")
+		    });
+		    Name.blur(function () {
+		        username = Name.val();
+		        console.log(username);
+		        if(username === ""){
+		            NameSpan.html("请输入用户名！");
+		            return;
+		        }else if(username.length > 20 || username.length < 3){
+		            NameSpan.html("用户名错误，规定在3-20位数字字母下划线");
+		            return;
+		        }else if(reg.test(username)){
+		            $.ajax({
+		                "url":"http://h6.duchengjiu.top/shop/api_user.php",
+		                "type": "POST",
+		                "dataType":"json",
+		                "data":{
+		                    "status": "check",
+		                    "username": username
+		                },
+		                "success":function (response) {
+		                    console.log(response);
+		                    if(response.code === 0){
+		                        NameSpan.html("用户名可用");
+		                    }else if(response.code === 2001){
+		                        NameSpan.html("用户名已存在");
+		                    }
+		                }
+		            })
+		        }else{
+		            NameSpan.html("用户名错误，不能使用特殊字符");
+		            return;
+		        }
+		    });
+		    Password.focus(function () {
+		        PasswordSpan.html("6-20位之间,数字字母下划线");
+		    });
+		    Password.blur(function () {
+		        password = Password.val();
+		        if(password === ""){
+		            PasswordSpan.html("请输入密码!");
+		            return;
+		        }else if(password.length > 20 || password.length < 6){
+		            PasswordSpan.html("用户密码错误，规定在6-20位之间,数字字母下划线");
+		            return;
+		        }else if(reg.test(password)){
+		            PasswordSpan.html("用户密码格式正确");
+		        }else{
+		            PasswordSpan.html("用户密码格式错误，不能使用特殊字符");
+		            return;
+		        }
+		    });
+		    confirmPassword.focus(function () {
+		        confirmPasswordSpan.html("请再次输入密码");
+		    });
+		    confirmPassword.blur(function () {
+		        password = Password.val();
+		        confirmPass = confirmPassword.val();
+		        if(confirmPass == ""){
+		            confirmPasswordSpan.html("请再次输入密码");
+		            return;
+		        }else if(confirmPass == password){
+		            confirmPasswordSpan.html("重复密码正确");
+		        }else{
+		            confirmPasswordSpan.html("重复密码不正确");
+		            return;
+		        }
+		    });
+		    $(".dddca").click(function () {
+		        username = Name.val();
+		        if(username === ""){
+		            NameSpan.html("请输入用户名！");
+		            return;
+		        }else if(username.length > 20 || username.length < 3){
+		            NameSpan.html("用户名错误，规定在3-20位数字字母下划线");
+		            return;
+		        }else if(reg.test(username)){
+		            $.ajax({
+		                "url":"http://h6.duchengjiu.top/shop/api_user.php",
+		                "type": "POST",
+		                "dataType":"json",
+		                "data":{
+		                    "status": "check",
+		                    "username": username
+		                },
+		                "success":function (response) {
+		                    console.log(response);
+		                    if(response.code === 0){
+		                        NameSpan.html("用户名可用");
+		                    }else if(response.code === 2001){
+		                        NameSpan.html("用户名已存在");
+		                    }
+		                }
+		            })
+		        }else{
+		            NameSpan.html("用户名错误，不能使用特殊字符");
+		            return;
+		        }
+		        password = Password.val();
+		        if(password === ""){
+		            PasswordSpan.html("请输入密码!");
+		            return;
+		        }else if(password.length > 20 || password.length < 6){
+		            PasswordSpan.html("用户密码错误，规定在6-20位之间,数字字母下划线");
+		            return;
+		        }else if(reg.test(password)){
+		            PasswordSpan.html("用户密码正确");
+		        }else{
+		            PasswordSpan.html("用户密码错误，不能使用特殊字符");
+		            return;
+		        }
+		        if(confirmPass == ""){
+		            confirmPasswordSpan.html("请再次输入密码");
+		        }else if(confirmPass == password){
+		            confirmPasswordSpan.html("重复密码正确");
+		        }else{
+		            confirmPasswordSpan.html("重复密码不一样");
+		            return;
+		        }
+		        $.ajax({
+		            "url":"http://h6.duchengjiu.top/shop/api_user.php",
+		            "type": "POST",
+		            "dataType":"json",
+		            "data":{
+		                "status": "register",
+		                "username": username,
+		                "password": password
+		            },
+		            "success":function (response) {
+		                console.log(response);
+		                if(response.code === 0){       
+						  alert("注册成功");	        
+		                  location.href = "register.html";
+		                }else if(response.code === 2001){
+		                    alert("用户名已存在");
+		                }else{
+		                    alert("注册失败");
+		                }
+		            }
+		        });
+		    })
+		</script>
+	</body>
+</html>

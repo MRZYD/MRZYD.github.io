@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="css/my.css" />
+		<style>
+			.username, .register, .login, .logout {
+			  display: none;
+			}
+			.header-nav ul li a.register{
+				float: right;
+			}
+			.username{
+				font-size: 1.2rem;
+    			color: #FFFFFF;
+			}
+			.logout{
+				font-size: 1.2rem;
+    			color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navobx">
+			<div class="szbox">
+				<span class="sz" id="sz"></span>
+				<span class="xx"></span>
+			</div>
+			<div class="txbox">
+				<a href="register.html">
+					<span class="tx"></span>
+				</a>				
+				<a href="register.html" class="login">
+					<p>点击登录一淘账户</p>
+				</a>
+				<a href="#" name="username" class="username">asdfghjkl1</a>&nbsp;&nbsp;
+				<a href="javascript:localStorage.clear(); location.reload();" class="logout">退出</a>
+			</div>
+		</div>
+		<ul class="footer1">
+	          <li>
+	            <a>
+	              <span></span>
+	              <p>商品收藏</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a>
+	              <span></span>
+	              <p>我的集分宝</p>
+	            </a>
+	          </li>
+	          <li style="border-right: none;">
+	            <a>
+	              <span></span>
+	              <p>淘宝订单</p>
+	            </a>
+	          </li>
+	    </ul>
+	    <div class="mydd">
+	    	<a href="">我的一淘订单</a>
+	    </div>
+	    <ul class="footer2">
+	          <li>
+	            <a href="order.html">
+	              <span></span>
+	              <p>全部订单</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="list.html">
+	              <span></span>
+	              <p>即将到账</p>
+	            </a>
+	          </li>
+	          <li style="border-right: none;">
+	            <a href="cart.html">
+	              <span></span>
+	              <p>已到账</p>
+	            </a>
+	          </li>
+	          <li style="border-right: none;">
+	            <a href="cart.html">
+	              <span></span>
+	              <p>无效订单</p>
+	            </a>
+	          </li>
+	    </ul>
+	    <ul class="ullist">
+	    	<li>
+	    		<span></span>
+	    		<a href="#">签到领集分宝</a>
+	    	</li>
+	    	<li>
+	    		<span></span>
+	    		<a href="#">邀请赚礼金券</a>
+	    	</li>
+	    	<li>
+	    		<span></span>
+	    		<a href="#">我的礼金券</a>
+	    	</li>
+	    	<li>
+	    		<span></span>
+	    		<a href="#">我的吃喝玩乐</a>
+	    	</li>
+	    </ul>
+	    <footer>
+	        <ul class="footer">
+	          <li>
+	            <a href="index.html">
+	              <span></span>
+	              <p>精选</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="list.html">
+	              <span></span>
+	              <p>品牌特卖</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="cart.html">
+	              <span></span>
+	              <p>购物车</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="order.html">
+	              <span></span>
+	              <p>我的</p>
+	            </a>
+	          </li>
+	        </ul>
+	    </footer>
+	</body>
+	<script>
+		if (localStorage.username) {
+	        var oUsername = document.querySelector('a[name=username]');
+	        var oLogout = document.querySelector('.logout');
+	        oUsername.innerText = localStorage.username;
+	        oUsername.style.display = 'inline';
+	        oLogout.style.display = 'inline';
+	      } else {
+	        var oLogin = document.querySelector('.login');
+	        oLogin.style.display = 'inline';
+	      };
+
+	</script>
+</html>

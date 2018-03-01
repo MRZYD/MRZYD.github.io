@@ -1,0 +1,207 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ol,ul{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+li{
+  list-style: none;
+  color: rgb(102, 102, 102);
+}
+em{
+  font-style:normal;
+}
+a{
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+}
+html{
+  font-size: 12px;
+}
+body{
+  width: 100%;
+/*  position: relative;*/
+}
+.listltle{
+	width: 100%;
+	height: 4.13rem;
+	background: #FB3434;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+}
+.listltle h1{
+	font-size: 1.5rem;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 4.13rem;
+}
+section{
+	margin-top: 4.13rem;
+	margin-bottom: 4.13rem;
+}
+/*----------------------*/
+.container{
+  padding: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+h4{
+  width: 100%;
+  min-height: 550px;
+  margin: auto;
+  font: '华文行楷';
+  text-align: center;
+}
+/**/
+.no1{
+  height: 75px;
+  overflow: hidden;
+  position: relative;
+  }
+.no1 p{
+  margin: 4px;
+}
+.no1 .cancel-order{
+  background: #FB3434;
+  width: 80px;
+  height: 24px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  margin-top: -14px;
+  border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%;
+  text-align: center;
+  line-height: 24px;
+  color: #fff;
+}
+.no1 .bill{
+  background: #FB3434;
+  width: 80px;
+  height: 24px;
+  position: absolute;
+  top: 75%;
+  right: 10%;
+  margin-top: -14px;
+  border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%;
+  text-align: center;
+  line-height: 28px;
+  text-decoration: none;
+  color: #fff;
+}
+.no2{
+  height: 100px;
+  /*background: pink;*/
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  }
+.no2 img{
+  height: 100%;
+  float: left;
+}
+.no2 .shop-name{
+  margin: 0px;
+  width: 30%;
+  height: 92px;
+  line-height: 92px;
+  text-align: center;
+  margin-left: 1%;
+  float: left;
+}
+.no2 p{
+  margin: 4px;
+  width: 28%;
+  height: 20px;
+  float: left;
+  margin-left: 1%;
+  font-size: 13px;
+}
+.no{
+  background: #ccc;
+  width: 80px;
+  height: 24px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  margin-top: -14px;
+  border-radius: 5% 5% 5% 5% / 25% 25% 25% 25%;
+  text-align: center;
+  line-height: 28px;
+}
+footer{
+	width: 100%;
+    height: 54px;
+    background-color: #FFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #F0F0F0;
+}
+.footer{
+  width: 100%;
+  height: 55px;
+  box-sizing: border-box;
+  border-top: none;
+}
+.footer li{
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+.footer li a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.footer li p{
+  color: rgb(102, 102, 102);
+  margin: 0;
+}
+.footer li:nth-child(1) span:nth-child(1){
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/房子.png);
+  background-size: cover;
+  margin-top: 4px;
+}
+.footer li:nth-child(2) span:nth-child(1){
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/特卖.png);
+  background-size: cover;
+  margin-top: 4px;
+}
+/*.footer1{
+  background-image: url(../images/房子1.png);
+}
+.footer2{
+	background-image: url(../images/特卖1.png);
+}
+.footer3{
+	background-image: url(../images/购物车3.png);
+}
+.footer4{
+	background-image: url(../images/我的1.png);
+}*/
+.footer li:nth-child(3) span:nth-child(1){
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/购物车2.png);
+  background-size: cover;
+      margin-top: 4px;
+}
+.footer li:nth-child(4) span:nth-child(1){
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/我的.png);
+  background-size: cover;
+  margin-top: 4px;
+}

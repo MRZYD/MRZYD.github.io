@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.shopping-list ul .lione{
+	font-style: normal;
+	float: left;
+	margin-left: 45px;
+	margin-right: 20px;
+	margin-top: 15px;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+}
+.shopping-list ul li {
+	float: left;
+    list-style: none;
+    margin-right: 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    color: white;
+}

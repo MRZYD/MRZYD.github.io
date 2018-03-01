@@ -1,0 +1,156 @@
+*{padding:0;margin:0;}
+li{list-style:none;}
+a{text-decoration:none;}
+body,html{width:100%;height:100%;}
+
+.shopping-list{
+	width: 100%;
+	height: 50px;
+	margin-bottom: 20px;
+	background: #ff5400;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.shopping-list ul{
+	width:1000px;
+	height:50px;
+	margin: 0 auto;
+	background-color: #ff5400;
+}
+.shopping-list ul li {
+	float: left;
+    list-style: none;
+    margin-right: 20px;
+    margin-left: 24px;
+    margin-top: 5px;
+    padding: 10px;
+    color: white;
+}
+.shopping-list ul li:hover{
+	background:orange;
+}
+.shopping-list ul li a {
+	text-decoration: none;
+	color: white;
+}
+.shopping-list ul li a:hover{
+	text-decoration: underline;
+}
+
+.goods{
+	width: 1150px;
+	height:600px;
+	margin: 0 auto;
+	border-bottom: 2px solid orange;
+
+}
+.goods div h1{ 
+	width: 1150px;
+    height: 40px;
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    background: orange;
+    text-align: center;
+}
+.goods div img{
+	margin: 50px;
+	float: left;
+	border: 1px solid orange;
+}
+.goods div h2 {
+	width: 500px;
+	height: 50px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 50px;
+	font-size: 24px;
+	font-weight: 100;
+	
+}
+.goods div p{
+	width: 500px;
+	height:80px;
+	float:left;
+	margin-top: 20px;
+	margin-left: 50px;
+	font-size: 18px;
+	
+}
+#btn{
+	width: 150px;
+	height: 50px;
+	float: left;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+#btn button{
+	width: 50px;
+	height: 50px;
+	float: left;
+	background: #EEEEEE;
+	border: 1px solid #6C6C6C;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 100;
+	outline: none;
+}
+#btn button:hover{
+	background: #CCCCCC;
+}
+#btn .num{
+	width: 50px;
+	height: 48px;
+	float: left;
+	margin: 0;
+	border-top: 1px solid #6C6C6C;
+	border-bottom: 1px solid #6C6C6C;
+	font-size: 20px;
+	text-align: center;
+	line-height: 48px;
+}
+.goods div span {
+	width: 500px;
+	height: 30px;
+	float: left;
+	margin: 20px 0 10px 50px;
+	font-size: 30px;
+	color: orange;
+}
+.goods div #add-to-cart {
+	width: 150px;
+	height: 40px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 50px;
+	font-size: 20px;
+	background: orange;
+	border: 0;
+	border-radius: 5px;
+	color: #EEEEEE;
+	outline: none;
+}
+.goods div #add-to-cart:hover{
+	background: #FC4200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

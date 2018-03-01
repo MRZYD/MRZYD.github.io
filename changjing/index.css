@@ -1,0 +1,146 @@
+.swiper-container{
+	width: 400px;
+	height: 600px;
+}
+#one{
+	color: red;
+	background-color: skyblue;
+}
+#two{
+	color: red;
+	background-color: skyblue;
+}
+#three{
+	color: red;
+	background-color: skyblue;
+}
+.swiper-button-prev{
+	transform:rotate(90deg);
+	position: absolute;
+	top: 520px;
+	left: 350px;
+	background-size: 80%;
+}
+.swiper-button-next{
+	transform:rotate(90deg);
+	position: absolute;
+	top: 560px;
+	left: 350px;
+	background-size: 80%;
+}
+.bg-st{
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	margin-top: -26.33%;
+}
+.ani img{
+	width: 100%;
+	height: 100%;
+	
+}
+h3{
+	width: 92%;
+	height: 7%;
+	position: absolute;
+	top: -105px;
+	left: 17px;
+}
+h3 img{
+	width: 100%;89 
+	height: 100%;
+}
+h4{
+	width: 15%;
+	height: 10%;
+	position: relative;
+	top: 490px;
+	left: 20px;
+	z-index: 999;
+}
+h4 img{
+	border-radius: 50%;
+	animation: move 2s infinite linear; /*次数*/
+}
+@-webkit-keyframes move {
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+#one p{
+	width: 50%;
+	height: 26%;
+	position: absolute;
+	top: 45px;
+	left: 107px;
+}
+#one p img{
+	width: 100%;
+	height: 100%;
+}
+.happy-one{
+	width: 18%;
+	height: 6%;
+	position: absolute;
+	top: -45px;
+	left: 285px;
+}
+.happy-two{
+	width: 5%;
+	height: 24%;
+	position: absolute;
+	top: 0px;
+	left: 336px;
+}
+.happy-three{
+	width: 5%;
+	height: 28%;
+	position: absolute;
+	top: 0px;
+	left: 310px;
+}
+.happy-four{
+	width: 5%;
+	height: 12%;
+	position: absolute;
+	top: 0px;
+	left: 284px;
+}
+.trip-one{
+	width: 35%;
+	height: 14%;
+	position: absolute;
+	top: 0px;
+	left: 135px;
+}
+.trip-two{
+	width: 32%;
+	height: 10%;
+	position: absolute;
+	top: 90px;
+	left: 140px;
+}
+.trip-three{
+	width: 32%;
+	height: 5%;
+	position: absolute;
+	top: 155px;
+	left: 140px;
+}
+.trip-four{
+	width: 50%;
+	height: 7%;
+	position: absolute;
+	top: 280px;
+	left: 177px;
+}
+.trip-five{
+	width: 70%;
+	height: 7%;
+	position: absolute;
+	top: 325px;
+	left: 105px;
+}

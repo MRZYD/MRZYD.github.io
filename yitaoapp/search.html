@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>search</title>
+		<link rel="stylesheet" href="css/search.css" />
+		<link rel="stylesheet" href="css/list.css" />
+	</head>
+	<body>
+		<header id="header">
+		  <a href="javascript:history.go(-1)">
+			 <span class="menu" id="menu"></span>
+		  </a>	      
+	      <div class="search">
+	        <em></em>
+	        <input id="searchInput" type="text" placeholder="">
+	      </div>
+	      <span class="message" id="searchBut">搜索</span>
+	    </header>
+		<div id = 'shopping-info' class="shopping-info">
+			
+			<ul class="shop-info-ul">
+				
+			</ul>
+		</div>
+
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript" src="js/myajax.js" ></script>
+	<script>
+		var search_text = getQueryString('search_text');
+		var oUl2 = document.querySelector('#shopping-info').querySelector('ul');
+	    myajax.get('http://h6.duchengjiu.top/shop/api_goods.php',
+	    {search_text: search_text},
+	    function(err,responseText){
+	      var json = JSON.parse(responseText);
+	      console.log(json);
+	      var data = json.data;
+	      for (var i = 0; i < data.length; i++) {
+				var obj = data[i];
+				oUl2.innerHTML += `
+				<li>
+					<a href="goods.html?goods_id=${obj.goods_id}">
+						<div><img src="${obj.goods_thumb}">
+						<em>${obj.goods_desc}</em></div>
+						<h2>${obj.goods_name}</h2>
+						<span>￥${obj.price}</span>
+						<img src="images/tianmao.png">
+						<p>销量:390</p>					
+					</a>
+				</li>`;			
+			}
+	    });
+		
+		$("#searchBut").click(function () {
+		   location.href = 'search.html?search_text=' + $("#searchInput").val();
+		});
+		document.onkeydown = function (event) {
+		    event = event || window.event;
+		    if(event.keyCode === 13 ){
+		        location.href = 'search.html?search_text=' + $("#searchInput").val();
+		    }
+		};
+		
+		
+	</script>
+</html>

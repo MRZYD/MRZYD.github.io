@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+	</head>
+	<body>		
+		<div id = 'shopping-list' class="shopping-list">
+			<div class="listltle">
+				<h1>品牌特卖</h1>
+			</div>			
+			<ul>
+				<li><a class="lione" href="index.html">首页</a></li>
+			</ul>
+		</div>
+		<div class="infotop"></div>
+		<div id = 'shopping-info' class="shopping-info">
+			<ul class="shop-info-ul"></ul>
+		</div>
+		<footer>
+	        <ul class="footer">
+	          <li>
+	            <a href="index.html">
+	              <span></span>
+	              <p>精选</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="list.html">
+	              <span></span>
+	              <p>品牌特卖</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="cart.html">
+	              <span></span>
+	              <p>购物车</p>
+	            </a>
+	          </li>
+	          <li>
+	            <a href="order.html">
+	              <span></span>
+	              <p>我的</p>
+	            </a>
+	          </li>
+	        </ul>
+	    </footer>
+		<script src="js/myajax.js" charset="utf-8"></script>
+		<script src="js/shopping.js" charset="utf-8" text></script>
+		<script src="js/jquery-3.2.1.min.js" charset="UTF-8"></script>
+		<script src="js/underscore.js" charset="UTF-8"></script>
+		
+		
+		<script>
+				var page = 1;
+				var pagesize = 100;
+				var cat_id = getQueryString('cat_id');
+				function getContent(){
+					$.get('http://h6.duchengjiu.top/shop/api_goods.php?cat_id='+cat_id, {page, pagesize}, function(json){
+						var template = "<li> <a href= goods.html? goods_id= <%=obj.goods_id %> ><div><img src= <%= obj.goods_thumb %> /></div><h2> <%= obj.goods_name %> </h2><span>￥ <%= obj.price %></span> <img src=images/tianmao.png ><p>销量:390</p></a></li>";
+						var compile = _.template(template);
+						for(var i = 0; i < json.data.length; i++){
+							var data = json.data[i];
+							$('.shop-info-ul').html($('.shop-info-ul').html() + compile(data));
+						}
+						lock = true;
+					});
+				}
+				getContent();
+				
+				//函数截流
+				var lock = true;
+				$(window).scroll(function(){
+					if(!lock) return;
+					var rate = $(document).scrollTop() / $(document).height();
+					console.log(rate);
+					if (rate > 0.7){
+						getContent(++page);
+						lock = false; //加锁
+					}
+				});	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>结算</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/modal.css" />
+		<!--<link rel="stylesheet" href="css/animate.css" />-->
+		<style>
+			a{text-decoration: none;}
+			.address{
+				width: 100%;
+				height: 120px;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.address .move-top{
+				width: 80%;
+				height: 40px;
+				background-color: #FFFFFF;
+				border-bottom: 1px solid #CCCCCC;
+				float:right;
+			}
+			.address p{
+				font-size: 1.8rem;
+				width: 60%;
+				height: 40px;
+				overflow: hidden;
+				line-height: 40px;
+				float: left;
+				text-align: center;
+				color: #393A3F;
+				margin-left: 10%;
+			}
+			.address .order-header{
+				float: left;
+				width: 20%;
+				height: 40px;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.address .order-header a i{
+				float: left;
+				width: 20px;
+				height: 35px;
+				margin-top: 5px;
+				background: url(images/sliders-btn.png) no-repeat -5px -9px;
+				display: block;
+				overflow: hidden;
+				margin-left: 5px;
+			}
+			.address .order-header a span{
+				font-size: 16px;
+				line-height: 40px;
+				margin-left: 5px;
+				color: #393A3F;
+			}
+			.mainbox{
+				width: 100%;
+				margin-top: 10px;
+			}
+			.mainbox .main-top{
+				width: 100%;
+				height: 40px;
+				background-color: #FFFFFF;
+			}
+			.mainbox .main-top a {
+				width: 40px;
+				height: 40px;
+				background: url(images/TB1XvjXKVXXXXXwaXXXXXXXXXXX-36-36.png) no-repeat;
+				float: left;
+				display: inline-block;
+				margin-left: 15px;
+			}
+			.mainbox .main-top h1{
+				height: 40px;
+				line-height: 30px;
+				margin-left: 20px;
+				font-weight: 300;
+				font-size: 20px;
+				color: #bfbfbf;
+			}
+			.address-ul {
+		     	overflow: hidden;
+		      	height: 90px;
+		      	width: 80%;
+		      	float: left;
+		    }
+		    .address-ul h2{
+		    	line-height: 90px;
+		    	width: 80%;
+		    	margin-left: 5px;
+		    }
+		    .address-ul li {
+				float: left;
+			    width: 100%;
+			    height: 75px;
+			    overflow: hidden;
+			    padding: 5px;
+			    cursor: pointer;
+			    box-sizing: border-box;
+			    background: #FFFFFF;
+			    font-size: 18px;
+			}
+		    .address-ul li.selected {
+		      	border: 1px solid #BFBFBF;
+		    }
+		    .id-add img{
+		    	width: 30px;
+		    	float: left;
+		    	height: 45px;
+		    	margin-top: 17px;
+		    	margin-left: 5px;
+		    }
+		    .id-add a{
+		    	width: 9%;
+		    	float: right;
+		    	height: 85px;
+		    }
+		    .id-add a i{
+		    	background:url(images/sliders-btn.png) no-repeat -4px -106px;
+		    	width:20px;
+		    	height: 35px;
+		    	display: block;
+		    	float: right;
+		    	margin-top: 25px;
+		    }
+		     .delete {
+		      float: right;
+		      padding-left: 5px;
+		      padding-right: 5px;
+		      background-color: #FB3434;
+		      color: white;
+		      cursor: pointer;
+		    }
+		    .delete:hover {
+		      background-color: white;
+		      color: orange;
+		    }
+		     .cancel-order {
+		      float: right;
+		      margin-right: 10px;
+		      border-radius: 5px;
+		      width: 60px;
+		      height: 26px;
+		      margin-top: -30px;
+		      font-size: 14px;
+		      line-height: 26px;
+		      background-color: orange;
+		      color: white;
+		      cursor: pointer;
+		    }
+		    .cancel-order:hover {
+		      background-color: white;
+		      color: orange;
+		    }	
+		    #order{
+		    	width: 100%;
+		    	margin: 0 auto;
+		    	background-color: #f6f6f6;
+		    }
+		    #order h3{
+		    	font-size: 16px;
+		    	margin-left: 15px;
+		    }
+		    #order li{
+		    	border-bottom: 1px solid #FB3434;
+		    	width: 100%;
+		    }
+		    #order li div.title{
+		    	background-color: #FB3434;
+		    	height: 50px;
+		    	padding: 5px;
+		    	width: 100%;
+		    }
+		    #order li div.title p{
+		    	width: 230px;
+		    	line-height: 20px;
+		    }
+		    #order li div{
+		    	width: 100%;		  
+		    }
+		    #order_li .order-goods{
+		    	width: 100%;
+		    }
+		    #order li div img{
+		    	width: 39%;
+		    	height: 9em;
+		    	float: left;
+		    }
+		    #order li div .shop-name{
+		    	line-height: 35px;
+		    	width: 60%;
+		    	float: left;
+		    	height: 9rem;
+		    	font-size: 1rem;
+		    }
+		   #order li div .pic{
+		   		color: #FB3434;
+		   		font-size: 18px;
+		   		float: left;
+		   		margin-top: 3px;
+		   }
+		   #order li div .sub{
+		   	text-align: right;
+		   	font-size: 18px;
+		   	margin-right: 15px;
+		   }
+		   #order li div .number{
+		   	margin-top: 3px;
+		   }
+		   .goto{
+		   		width: 100%;
+		   		height: 100px;		   	
+		   }
+		   .goto1{
+		   	width: 100%;
+		   	height: 50px;
+		   	
+		   }
+		   .goto .goto1 .fuwu{
+		   	font-size: 20px;
+		   	margin-top: 15px;
+		   	margin-left: 15px;
+		   	height: 20px;
+		   	float: left;
+		   	width: 40%;
+		   }
+		   .goto .go{
+		   	font-size: 16px;
+		   	float: right;
+		   	margin-top: 17px;
+		   	width: 55%;
+		   }
+		   .goto-time{
+		   	width: 100%;
+		   	height: 50px;
+		   	border-bottom: 1px solid #e9e9e9;
+		   }
+		   .goto .goto-time .gotime{
+		   	margin-top: 10px;
+		   	color: #cccccc;
+		   	margin-left: 15px;
+		   	font-size: 1.3rem;
+		   	height: 15px;
+		   	width: 40%;
+		   	float: left;
+		   }
+		   .goto .times{
+		   	margin-left: 30px;
+		   	float: left;
+		   	margin-top: 10px;
+		   	font-size: 1.3rem;
+		   	color: #CCCCCC;
+		   }
+		   
+		   .nature{
+		   	width: 100%;
+		   	height: 50px;
+		   	border-bottom: 1px solid #BFBFBF;
+		   }
+		   .nature h2{
+		   	line-height: 50px;
+		   	margin-left: 15px;
+		   	color: #393A3F;
+		   	font-size: 18px;
+		   }
+		   
+		   .insurance{
+		   	width: 100%;
+		   	height: 50px;
+		   	border-bottom: 1px solid #CCCCCC;
+		   }
+		   .insurance h2{
+		   	font-size: 18px;
+		   	margin-left: 15px;
+		   	line-height: 50px;
+		   	float: left;
+		   }
+		   .insurance span{
+		   	float: right;
+		   	font-size: 16px;
+		   	margin-right: 30px;
+		   	line-height: 50px;
+		   }
+		   .insurance a{
+		   	width: 20px;
+		   	height: 40px;
+		   	background: url(images/sliders-btn.png) no-repeat -4px -106px;
+		   	display: block;
+		   	margin-top: 10px;
+		   	float: right;
+		   }
+		   .payment{
+		   	width: 100%;
+		   	height: 200px;
+		   }
+		   .payment .money{
+		   	width: 100%;
+		   	height: 50px;
+		   	border-bottom: 1px solid #CCCCCC;
+		   }
+		   .payment .money h2{
+		   	float: left;
+		   	font-size: 18px;
+		   	line-height: 50px;
+		   	margin-left: 15px;
+		   }
+		   .payment .money span{
+		   	font-size: 14px;
+		   	float: right;
+		   	margin-top: 18px;
+		   	margin-right: 15px;
+		   	color: #FB3434; 	
+		   }
+		   .payment .money a{
+		   	width: 20px;
+		   	height: 40px;
+		   	background: url(images/sliders-btn.png) no-repeat -4px -106px;
+		   	display: block;
+		   	margin-top: 10px;
+		   	float: right;
+		   }
+		   .payment .eveny-payment{
+		   		width: 100%;
+		   		height: 120px;
+		   }
+		   .payment .eveny-payment .weix{
+		   	width: 95%;
+		   	height: 35px;
+		   	margin: 0 auto;
+		   	text-align: center;
+		   	background-color: limegreen;
+		   	border-radius: 3px;
+		   	line-height: 34px;
+		   	font-size: 1rem;
+		   	color: #FFFFFF;
+		   	margin-top: 15px;
+		   	cursor: pointer;
+		   }
+		   .payment .eveny-payment .zfb{
+		   	width: 95%;
+		   	margin: 0 auto;
+		   	height: 35px;
+		   	text-align: center;
+		   	background-color: #FB3434;
+		   	border-radius: 3px;
+		   	line-height: 35px;
+		   	font-size: 1rem;
+		   	margin-top: 15px;
+		   	color: #FFFFFF;
+		   	cursor: pointer;
+		   }
+		   .payment .eveny-payment .dao{
+		   	width: 95%;
+		   	margin: 0 auto;
+		   	height: 35px;
+		   	text-align: center;
+		   	background-color: skyblue;
+		   	border-radius: 3px;
+		   	line-height: 35px;
+		   	font-size: 1rem;
+		   	margin-top: 15px;
+		   	color: #FFFFFF;
+		   	cursor: pointer;
+		   }
+		   .foot-di{
+		   	width: 100%;
+		   }
+		   .foot-di p{
+		   	margin-left: 10px;
+		   	margin-top: 10px;
+		   	line-height: 20px;
+		   }
+		</style>
+	</head>
+	<body>
+		<div class="address">
+			<div class="move-top">
+				<p>确认订单</p>
+			</div>
+				<div class="order-header">
+					<a href="order.html">
+						<i></i>
+						<span>返回</span>
+					</a>
+				</div>			
+			<div class="id-add">
+				<img src="images/dizitu.jpg" />
+				<ul class="address-ul">
+				</ul>
+				<a href="address.html" />
+					<i></i>
+				</a>
+			</div>
+		</div>
+		<main class="mainbox">
+			<div class="main-top">
+				<a></a>
+				<h1>衣直秀旗舰店</h1>
+			</div>
+			
+			<ul id="order">
+			</ul>
+		</main>
+		<div class="goto">
+			<div class="goto1">
+				<p class="fuwu">配送服务</p>
+				<p class="go">xx快递(可选京准达)</p>
+			</div>
+			<div class="goto-time">
+				<p class="gotime">配货时间</p>
+				<p class="times">待定</p>
+			</div>			
+		</div>
+		<div class="nature">
+			<h2>此商品性质不支持7天退货</h2>
+		</div>
+		<div class="insurance">
+			<h2>运费险</h2>
+			<a></a>
+			<span>请选择</span>
+		</div>
+		<div class="payment">
+			<div class="money">
+				<h2>促销优惠</h2>
+				<a></a>
+				<span>查看跟多优惠</span>
+			</div>
+			<div class="eveny-payment">
+				<p class="weix">微信支付</p>
+				<p class="zfb">支付宝支付</p>
+				<p class="dao">货到付款</p>
+			</div>
+		</div>
+		<div class="foot-di">
+			<p>温馨提示：订单中存在不支持7天无理由退货的商品，请确认商品信息后购买</p>
+		</div>
+		<script type="text/javascript" src="js/animate.js" ></script>
+		<script type="text/javascript" src="js/modal.js" ></script>
+		<script type="text/javascript" src="js/myajax.js" ></script>
+		<script type="text/javascript" src="js/alert.js" ></script>
+		<script>
+			
+//			var oOrder = document.querySelector('#order');
+//		    myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {token: localStorage.token}, function(err, responseText){
+//		      var json = JSON.parse(responseText);
+//		      console.log(json);
+//		      var data = json.data;
+//		      if (data.length === 0) {
+//		        oOrder.innerHTML = "<h3>您的订单为空,如果还没登录，请先&nbsp;<a href='register.html'>登录</a></h3>";
+//		        return;
+//		      }
+//		      for (var i = 0; i < data.length; i++) {
+//		      var obj = data[i];
+//		        //遍历商品列表，拼装HTML
+//		      var goodsHTML = '';
+//		      for (var j = 0; j < obj.goods_list.length; j++) {
+//		        var goods = obj.goods_list[j];
+//		        goodsHTML += `
+//		            <div>
+//		             <img src="${goods.goods_thumb}">
+//		             <p class="shop-name">${goods.goods_name}</p>          
+//		              	<p class="pic">¥${goods.goods_price}</p>
+//		              	<p class="number">数量：${goods.goods_number}</p>
+//		             	<p class="sub">小计：${goods.goods_price * goods.goods_number}</p>
+//		            </div> `;       
+//		        }
+//		        //一件商品的总价
+//		        oOrder.innerHTML += `
+//		                          <li class="order_li">
+//		                            <div class="title"> 
+//		                           	<p> 订单号:${parseInt(Math.random()*10000000000)}${obj.order_id}</p>
+//		                           	<p>总价:${obj.total_prices}</p> <span data-id="${obj.order_id}" class="cancel-order">取消订单</span></div>
+//		                            <div class="order-goods">
+//		                            ${goodsHTML}
+//		                            </div>
+//		                          </li> `;                         
+//		      }
+//		    });
+//			    oOrder.onclick = function(event) {
+//			      event = event || window.event;
+//			      var target = event.target || event.srcElement;
+//			      if (target.className === 'cancel-order') {
+//			        if (!confirm('确认要取消订单吗?')) {
+//			          return;
+//			        }
+//			        var order_id = target.dataset.id;
+//			        myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id}, function(err, responseText) {
+//			          var json = JSON.parse(responseText);
+//			          if (json.code === 0) {
+//			            target.parentNode.parentNode.remove(target.childNodes);
+//			          }
+//			        });
+//			      }else{
+//			      	var oLi = oOrder.querySelector('li');
+//			      	for (var i = 0;i < oLi.length;i++) {
+//			      		oLi[i].classList.remove("order_li");
+//			      	}
+//			      }
+//			    }
+//				      
+	      	function showAddress() {
+	        myajax.get('http://h6.duchengjiu.top/shop/api_useraddress.php',
+	        {token: localStorage.token},
+	        function(error, responseText) {
+	          var json = JSON.parse(responseText);
+	          console.log(json);
+	          var data = json.data;
+	          var oAddressUl = document.querySelector('.address-ul');
+	          if (data.length === 0) {
+	            oAddressUl.innerHTML = '<h2>您还没有收货地址，请点击添加收货地址</h2>';
+	            return;
+	          }
+	          oAddressUl.innerHTML = '';
+	          for (var i = data.length - 1; i >= 0; i--) {
+	            var obj = data[i];
+	            oAddressUl.innerHTML += `
+	                            <li data-id="${obj.address_id}">
+	                              <span>收货人：${obj.consignee}</span><span name="delete" class="delete" data-id="${obj.address_id}">删除</span><br />
+	                              <span>手机：${obj.mobile}</span><br />
+	                              <span>地址：${obj.address}</span>
+	                            </li>
+		            `;
+		          }
+		        })
+		      }
+		      showAddress();
+	      var selected_address_id = 0;//如果这个值为0，无法下订单，当点击一个收货地址时，给这个变量赋值
+	      //给收货地址添加一个事件代理
+	      var oAddressUl = document.querySelector('.address-ul');
+	      oAddressUl.onclick= function(event) {
+	        event = event || window.event;
+	        var target = event.target || event.srcElement;
+	        console.log(target.nodeName);
+	        if (target.className === 'delete') {
+	          if (!confirm('确认要删除收货地址吗？')) {
+	            return;
+	          }
+	          var address_id = target.dataset.id;
+	          console.log(address_id);
+	          myajax.get('http://h6.duchengjiu.top/shop/api_useraddress.php',
+	          {status: 'delete', address_id, token: localStorage.token}, function(error, responseText){
+	            var json = JSON.parse(responseText);
+	            if (json.code === 0) {
+	              target.parentNode.parentNode.removeChild(target.parentNode);
+	            }
+	          })
+	        } else {
+	          //先让所有li元素的样式清空
+	          var oAddressLis = oAddressUl.querySelectorAll('li');
+	          for (var i = 0; i < oAddressLis.length; i++) {
+	            oAddressLis[i].classList.remove('selected');
+	          }
+	
+	          if (target.nodeName === 'LI') {
+	            //点击LI元素选择一个收货地址
+	            selected_address_id = parseInt(target.dataset.id);
+	            target.classList.add('selected');
+	          } else if (target.nodeName === 'SPAN'){
+	            selected_address_id = parseInt(target.parentNode.dataset.id);
+	            target.parentNode.classList.add('selected');
+	          }	
+	        }
+	      }
+  	
+		</script>
+	</body>
+</html>

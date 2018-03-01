@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情页</title>
+    <link rel="stylesheet" type="text/css" href="css/goods.css"/>
+    <link rel="stylesheet" type="text/css" href="css/alert.css"/>
+</head>
+<body>
+<!--head-->
+<header>
+    <a href="javascript:history.go(-1)"><img class="return" src="images/回退.png"/></a><div class="message">
+    <div id="message"></div></div>
+    <img class="share link" src="images/分享.png"/>
+</header>
+<!--section-->
+<section>
+    <nav>
+        <div class="goods goodsMessage"><p>基本信息</p></div>
+        <div class="goods goodsDetails"><p>商品详情</p></div>
+        <div class="goods goodsComments"><p style="border-right:none;">评价3318</p></div>
+    </nav>
+    <div class="detail">
+    </div>
+</section>
+<!--footer-->
+<footer>
+    <div class="custom service"><img class="atm" src="images/atm.png"/><span id="atm">客服</span></div>
+    <div class="store" style="border-left:0;"><img class="shop" src="images/shop.png"/><span id="shop">进店</span></div>
+    <div class="collection" style="border-left:0;"><img class="favorite" src="images/favorite.png"/><span id="favorite">收藏</span></div>
+    <div class="shopping cart" id="add-to-cart">加入购物车</div>
+    <div class="buy">立即购买</div>
+</footer>
+</body>
+<script src="js/alert.js"></script>
+<script src="js/myajax.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/goods.js"></script>
+</html>

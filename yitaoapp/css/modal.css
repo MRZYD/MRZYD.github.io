@@ -1,0 +1,46 @@
+.modal {
+	display: none;
+	position: absolute;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+}
+.modal .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-top: -20px;
+  background-color: #FFFFFF;
+  border: 1px solid orange;
+  margin-right: 15px;
+  
+}
+.modal .container .hd {
+  line-height: 50px;
+  font-size: 1.5rem;
+  background-color: #E4E4E4;
+  border-bottom: 1px solid orange;
+  color: #393A3F;
+}
+.modal .container .hd span {
+  cursor: pointer;
+  color: orange;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 3px;
+  width: 45px;
+  text-align: center;
+  line-height: 33px;
+  float: right;
+  border: 1px solid #FFFFFF;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.modal .container .hd span:hover {
+  background-color: orange;
+  color: white;
+}
+.modal .container .bd {
+  padding: 10px;
+}
