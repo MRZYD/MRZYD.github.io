@@ -1,0 +1,94 @@
+/*header*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*iPhone6*/
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*iPhone6Plus*/
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (max-width:640px){
+  ::-webkit-scrollbar {display:block;}
+  body{background:#eeefef;}
+  .transit {width:400%;position:fixed;top:0;left:50%;margin-left:-200%;}
+  header{width:100%;height:30px;line-height:30px;position:fixed;top:5%;left:0;z-index:10;}
+
+  #nav{width:60%;}
+  #nav ul{width:85%;margin:35% 5% 5% 10%;}
+  #nav ul li{font-size:1rem;margin-bottom:0.5rem;}
+  .nav-p{width:80%;margin:0 10% 10% 10%;}
+  .nav-p p{margin-bottom:0.3rem;line-height:1.5rem;font-size:0.9rem;}
+  .nav-p-app{display:block;}
+  .nav-p-pc{display:none;}
+  .nav-logo{width:90%;margin-left:10%;}
+  .nav-logo h1 img{width:40%;display:block;margin:0;}
+  .nav-logo p{line-height:1.5rem;margin-top:1rem;font-size:0.85rem;color:#999;}
+
+  .wfbanner{margin-top:-10rem;}
+  .swiper-wrapper-banner{transition-timing-function:linear;height:20rem;}
+  .swiper-pagination{width:100%;display:block;margin-top:20%;}
+  .swiper-pagination-bullet{margin:0 0.5rem;}
+  .swiper-pagination-bullet {width: 10px;height: 10px;display: inline-block;border-radius: 100%;background: #000;opacity: .2;}
+  .swiper-pagination-bullet-active {opacity: 1;background: #333;}
+
+  .prize-section{top:15%;}
+  /*idea.html*/
+  .swiper-idea-banner{width:90%;margin:30% auto 40%;height:100%;}
+  .swiper-button-right, .swiper-container-rtl .swiper-button-prev {background: url("../images/right-button.png");right: 40px;top:auto;}
+  .swiper-button-left, .swiper-container-rtl .swiper-button-next {background: url("../images/left-button.png");left: 40px;top:auto;}
+  .swiper-button-right, .swiper-button-left {position: absolute;top: 85%;}
+
+  /*case-details*/
+  .swiper-case-banner{width:90%;margin:2% auto 1%;height:100%;}
+  .case-details-h3{animation-delay:1s;width:55%;color:#333;text-align:center;line-height:30px;font-size:18px;margin:10px auto;font-weight:100;position:relative;}
+  .case-details-h3:before,.case-details-h3:after{content: '';position: absolute;top: 50%;margin-top:-1px;width: 25%;height:2px;}
+  .case-details-h3:before{left: 0%;background:url('../images/right.png') no-repeat right center;}
+  .case-details-h3:after {right: 0%;background:url('../images/left.png') no-repeat left center;}
+  .case-details-p{animation-delay: 2s;color:#666;width:90%;line-height:30px;font-size:14px;text-align:center;}
+  .arrow{margin:0 auto;text-align:center;}
+  .arrow a{display:block;width:100%;height:85px;position:relative;}
+  .arrow a img{display:block;}
+  .arrow a h4{font-size:18px;font-weight:100;color:#666;position:absolute;bottom:0;width:100%;text-align:center;}
+  .down{width:20px;height:43px;position:absolute;left:50%;top:0;margin-left:-10px;animation: myfirst 1s infinite;}
+
+  /*team.html*/
+  .swiper-team-banner{display:none;}
+  .app-swiper{display:block;width:100%;height:34rem;overflow: hidden;overflow-y: auto;}
+  .app-swiper ul {width:95%;margin-left:3%;}
+  .app-swiper ul li{width:49%;margin-right:2%;float:left;margin-bottom:1rem;}
+  .app-swiper ul li:nth-child(2n){margin-right:0;}
+  .app-swiper ul li img{width:11rem;height:11rem;text-align:center;display:block;}
+  .app-swiper ul li a span{display:block;width:11rem;margin:0 auto;text-align:center;font-size:1rem;padding:0.5rem 0;background:#fff;color:#333;}
+
+  /*team-deatils.html*/
+  .swiper-details-banner{width:90%;margin:30% auto 40%;height:100%;}
+
+  /*prize.html*/
+  .prize-left{width:90%;height:3rem;float:none;margin:0 auto;}
+  .prize-left-ul{animation-delay:1s;display:block;}
+  /* .prize-left-app{width:30rem;display:block;} */
+  .prize-left ul{animation-delay:1s;width:100%;height:3rem;padding:0;white-space: nowrap;overflow-x:scroll;}
+  .prize-left ul li{width:auto;margin:0 1rem;height:3rem;padding:0;font-size:1.1rem;line-height:3rem;float:left;display: inline-block;}
+  .prize-left ul li a{color:#666;}
+  .prize-left ul li:hover a{color:#111;}
+  .prize-left ul li span{display:none;}
+  .prize-right{width:90%;height:30rem;float:left;margin:0 5%;margin-top:2%;background:url('../images/500008961_banner.png') no-repeat;padding:30px 0;}
+  .swiper-prize-right-h3{width:100%;padding:1rem 2rem;text-align:center;font-size:1.2rem;}
+  .swiper-prize-right-p{font-size:1rem;}
+
+  /*work.html*/
+  .work-right{width:90%;margin:0 5%;height:31rem;}
+  .swiper-work-right-p,.swiper-work-right-span{font-size:1rem;line-height:2rem;margin-bottom:0.5rem;}
+
+
+
+}

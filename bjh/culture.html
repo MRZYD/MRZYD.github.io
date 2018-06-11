@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/yzui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Home</title>
+</head>
+<body>
+<header>
+  <div class="header container clearfix">
+    <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="culture.html">企业文化</a></li>
+        <li><a href="honor.html">资质荣誉</a></li>
+        <li><a href="restaurant.html">餐饮风格</a></li>
+        <li><a href="news-details.html">会所装修</a></li>
+        <li><a href="project.html">教育培训</a></li>
+        <li><a href="news.html">行业资讯</a></li>
+        <li><a href="contactus.html">联系我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="home-banner">
+  <img src="images/home-banner.png" alt="">
+</div>
+<section>
+  <div class="navigation container clearfix">
+    <div class="navigation-bar-left">
+      <span>您所处的位置：</span>
+      <p>首页>企业文化</p>
+    </div>
+  </div>
+  <div class="culture-aboutus">
+    <div class="culture-aboutus-sec container">
+      <h2 class="restaurant-case-sec-title">关于我们</h2>
+      <p class="first-child">办公室空间布局充分了解客户需求宗旨了解企业文化，考虑的范畴包含部门的互动、部署座位、家具的要求、经营要求、照明元素、技术要求，以及装修工期和预算要求。办公室装修细节二，进入装修区域的第一件事件就是地面评价，假如有问题及时调整，这关乎到以后的一切装修细节，地面平整问题是这个时候的重要处理问题，打线槽，须要注意线槽的深度以及宽度问题。</p>
+      <p>天花板，天花板注意细节是消防安全问题，因而我们在进行办公室装修的时候注意喷淋口应显露吊顶肯定的尺寸。</p>
+      <p>关于没有进行消防安全设备铺设，例如烟感器，这个事项是为了以后的物业以及消防局的测验。</p>
+      <ul class="clearfix">
+        <li><img src="images/culture-1.png" alt=""></li>
+        <li><img src="images/culture-2.png" alt=""></li>
+        <li><img src="images/culture-3.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <div class="vision">
+    <div class="vision-sec container">
+      <h2 class="project-case-sec-title">我们的企业文化与愿景</h2>
+      <p class="first-child">办公室空间布局充分了解客户需求宗旨了解企业文化，考虑的范畴包含部门的互动、部署座位、家具的要求、经营要求、照明元素、技术要求，以及装修工期和预算要求。办公室装修细节二，进入装修区域的第一件事件就是地面评价，假如有问题及时调整，这关乎到以后的一切装修细节，地面平整问题是这个时候的重要处理问题，打线槽，须要注意线槽的深度以及宽度问题。</p>
+      <p>天花板，天花板注意细节是消防安全问题，因而我们在进行办公室装修的时候注意喷淋口应显露吊顶肯定的尺寸。</p>
+      <p>关于没有进行消防安全设备铺设，例如烟感器，这个事项是为了以后的物业以及消防局的测验。</p>
+    </div>
+  </div>
+  <p class="telephone">010-5721206</p>
+</section>
+<footer>
+  <div class="footer container">
+    <ul class="clearfix">
+      <li><a href="">企业文化</a></li>
+      <li><a href="">资质荣誉</a></li>
+      <li><a href="">餐饮风格</a></li>
+      <li><a href="">会所装修</a></li>
+      <li><a href="">教育培训</a></li>
+      <li><a href="">行业咨讯</a></li>
+      <li><a href="">联系我们</a></li>
+    </ul>
+    <p>地址：北京市大兴区金星路12号A座1102</p>
+    <p>版权所有：北京佰嘉鸿装饰工程有限公司京ICP备11032073号-4</p>
+    <div class="vx">
+      <img src="images/vx.png" alt="">
+      <span>微信扫一扫</span>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+
+    var hbswiper = new Swiper('.swiper-home-banner', {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination-home',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    });
+
+    $(function(){
+      $(".case-sec-head ul li").click(function(){
+        var index = $(this).index();
+        $(this).addClass('hover').siblings().removeClass('hover');
+        $(".case-sec-body ul").eq(index).show().siblings().hide();
+      });
+    })
+
+</script>
+</html>

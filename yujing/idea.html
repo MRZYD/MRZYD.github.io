@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/yzui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header
+    class="animated fadeInDown homeheader"
+  >
+    <span class="menu">MENU</span>
+    <a class="home" href="index-1.html">HOME</a>
+  </header>
+  <nav id="nav" style="display:none;">
+    <ul class="clearfix">
+      <li><a href="idea.html">理念</a></li>
+      <li><a href="team.html">团队</a></li>
+      <li><a href="prize.html">奖项</a></li>
+      <li><a href="work.html">工作机会</a></li>
+    </ul>
+    <div class="nav-p">
+      <p>北京市海淀区杏石口路30号坦博艺术中心A座3层301室</p>
+      <p class="nav-p-pc">联系电话：010-8620-7975</p>
+      <p class="nav-p-pc">联系邮箱：YuJing_Design@163.com</p>
+      <p class="nav-p-app">联系电话：<br>010-8620-7975</p>
+      <p class="nav-p-app">联系邮箱：<br>YuJing_Design@163.com</p>
+    </div>
+    <div class="nav-logo">
+      <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+      <p>COPYRIGHT (C) 2014 YUJING. ALL RIGHTS RESERVED     京ICP备1234567号</p>
+    </div>
+  </nav>
+  <section class="clearfix">
+    <div class="prize-section animated fadeInUp">
+      <div class="swiper-container swiper-idea-banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="case-details.html"><img src="images/idea-banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="case-details.html"><img src="images/idea-banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="case-details.html"><img src="images/idea-banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="case-details.html"><img src="images/idea-banner.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="case-details.html"><img src="images/idea-banner.png" alt=""></a></div>
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-right"></div>
+      <div class="swiper-button-prev swiper-button-left"></div>
+    </div>
+  </section>
+  <footer></footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/swiper.animate1.0.3.min.js"></script>
+  <script>
+
+    $(".menu").click(function(){
+      $("#nav").css('display','block');
+      if($("#nav").hasClass("fadeInLeft")){
+        $("#nav").addClass('animated fadeOutLeft');
+        $("#nav").removeClass('fadeInLeft')
+      }else{
+        $("#nav").addClass('animated fadeInLeft');
+        $("#nav").removeClass('fadeOutLeft');
+      }
+    })
+
+
+    var hbswiper = new Swiper('.swiper-idea-banner', {
+      slidesPerView: 1,
+      speed:1500,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+       nextEl: '.swiper-button-next',
+       prevEl: '.swiper-button-prev',
+     },
+    });
+  </script>
+</body>
+</html>
